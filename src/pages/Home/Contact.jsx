@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Contact = () => {
@@ -13,9 +14,11 @@ const Contact = () => {
 
                     </div>
                     <div className=" flex justify-center items-center md:w-1/4">
-                        <button className="btn text-white font-bold hover:shadow-lg hover:bg-slate-300" style={{ background: 'linear-gradient(to right, #922d80, #0073e6)' }}>
-                            CONTACT WITH US
-                        </button>
+                        <Link to={"/contact"}>
+                            <button className="btn text-white font-bold hover:shadow-lg hover:bg-black bg-orange-600" >
+                                CONTACT WITH US
+                            </button>
+                        </Link>
                     </div>
 
                 </div>
