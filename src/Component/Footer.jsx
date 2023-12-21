@@ -40,7 +40,7 @@ const Footer = () => {
                 </aside>
                 <div className=" footer-center p-4 bg-neutral text-neutral-content">
                 <aside>
-                    <p>Copyright © 2023 - All right reserved by newsbd.com</p>
+                    <p>Copyright © 2023 - All right reserved by task.com</p>
                     <p className="text-2xl font-bold">{moment().format("dddd, MMMM D, YYYY ")}</p>
                 </aside>
             </div>
