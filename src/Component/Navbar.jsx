@@ -36,7 +36,7 @@ const Navbar = () => {
         <li><NavLink to="/contact">Contact</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         {
-            user? <li><NavLink to="/myCart">Dashboard</NavLink></li> :" "
+            user? <li><NavLink to="/dashboard">Dashboard</NavLink></li> :" "
         }
 
     </>

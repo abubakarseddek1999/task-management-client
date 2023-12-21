@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { useRef } from "react";
 import Swal from "sweetalert2";
 
+
 const Contact = () => {
     const form = useRef();
 
@@ -14,7 +15,7 @@ const Contact = () => {
         emailjs.sendForm('service_y9ie19r', 'template_5to78dm', form.current, 'LTu1g8i9IIhfTU9qv')
             .then((result) => {
                 console.log(result.text);
-                Swal('success')
+                alert('success')
             }, (error) => {
                 console.log(error.text);
             });
