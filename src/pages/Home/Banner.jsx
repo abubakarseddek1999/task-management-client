@@ -12,7 +12,7 @@ const Banner = () => {
                 <p className='text-3xl md:text-7xl text-amber-600 font-bold'>Daily Task</p>
                 <div className='flex justify-center items-center'>
                     <Link to={"/login"}>
-                        <button className='btn  bg-orange-600  font-bold hover:bg-slate-950 uppercase p-4 m-5 text-white '> Explore Now</button>
+                        <button className='btn  bg-orange-600  font-bold hover:bg-slate-950 uppercase p-4 m-5 text-white '>Let’s Explore</button>
                     </Link>
                 </div>
             </div>

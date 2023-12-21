@@ -78,7 +78,7 @@ const Login = () => {
             <Helmet>
                 <title> Task Management || Sign In</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero md:min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row ">
                     <div className="text-center w-1/2 mr-14 lg:text-left">
                         {/* <img src={img} alt="" /> */}
