@@ -53,7 +53,7 @@ const SignUp = () => {
 
                 console.log(result);
                 e.target.reset();
-                navigate('/');
+                navigate('/dashboard');
 
                 Swal('register success', "success")
                 setSuccess('User Created Successfully')

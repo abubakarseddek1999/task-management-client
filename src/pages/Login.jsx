@@ -11,8 +11,8 @@ const Login = () => {
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    const from = location.state?.from?.pathname || "/";
-    console.log('state in the location login page', location.state)
+    // const from = location.state?.from?.pathname || "/";
+    // console.log('state in the location login page', location.state)
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -29,7 +29,7 @@ const Login = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
-
+                navigate('/dashboard');
                 Swal.fire({
                     title: 'User Login Successful.',
                     showClass: {
@@ -39,7 +39,7 @@ const Login = () => {
                         popup: 'animate__animated animate__fadeOutUp'
                     }
                 });
-                navigate(from, { replace: true });
+                // navigate(from, { replace: true });
 
             })
             .catch(error => console.log(error))
@@ -51,7 +51,7 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 console.log(result.user);
-                navigate(location?.state ? location.state : '/');
+                navigate('/dashboard');
 
 
             })
@@ -82,7 +82,7 @@ const Login = () => {
                 <div className="hero-content flex-col lg:flex-row ">
                     <div className="text-center w-1/2 mr-14 lg:text-left">
                         {/* <img src={img} alt="" /> */}
-                        <img src="https://i.postimg.cc/fW0WLNn4/Mobile-login-pana-1.png"alt="" />
+                        <img src="https://i.postimg.cc/fW0WLNn4/Mobile-login-pana-1.png" alt="" />
                     </div>
 
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -121,18 +121,18 @@ const Login = () => {
                                 <input disabled={false} className="btn bg-[#4bcc92] text-white" type="submit" value="Log in" />
                             </div>
 
-                            <div className='text-center'>
-                                <div className='mt-3'>
-                                    <p >New here? <br /> <Link to="/signup" className='text-lime-600 font-bold '>Create a New Account</Link></p>
-                                    <p>Or Sign In with</p>
-                                    <div className='flex justify-center gap-4 mt-2'>
-                                        <Link><AiFillFacebook /> </Link>
-                                        <Link onClick={handleGoogleSignIn}><FcGoogle /> </Link>
-                                        <Link><AiFillInstagram /> </Link>
-                                    </div>
+                        </form>
+                        <div className='text-center p-2'>
+                            <div className='mt-3'>
+                                <p >New here? <br /> <Link to="/signup" className='text-lime-600 font-bold '>Create a New Account</Link></p>
+                                <p>Or Sign In with</p>
+                                <div className='flex justify-center gap-4 mt-2'>
+                                    <Link><AiFillFacebook /> </Link>
+                                    <button onClick={handleGoogleSignIn}><FcGoogle /> </button>
+                                    <Link><AiFillInstagram /> </Link>
                                 </div>
                             </div>
-                        </form>
+                        </div>
 
                     </div>
                 </div>
