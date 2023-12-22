@@ -9,7 +9,7 @@ const TodoList = () => {
     const [tasks, setTasks] = useState([]); // Replace with your actual tasks state
     console.log(tasks);
     useEffect(() => {
-        fetch('http://localhost:5000/task')
+        fetch('https://y-flax-two.vercel.app/task')
             .then(res => res.json())
             .then(data => {
                 setTasks(data);
@@ -34,7 +34,7 @@ const TodoList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/task/${taskId}`, {
+                fetch(`https://y-flax-two.vercel.app/task/${taskId}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -62,7 +62,7 @@ const TodoList = () => {
         // Implement logic to edit the task
         // Update the state accordingly
         // send data to the server
-        fetch(`http://localhost:5000/task/${confirmEditTask?._id}`, {
+        fetch(`https://y-flax-two.vercel.app/task/${confirmEditTask?._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

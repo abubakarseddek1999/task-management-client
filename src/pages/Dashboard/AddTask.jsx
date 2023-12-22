@@ -20,7 +20,7 @@ const AddTask = () => {
   //   // Fetch tasks from the backend and update the state
   //   const fetchData = async () => {
   //     try {
-  //       const response = await fetch('http://localhost:5000/tasks');
+  //       const response = await fetch('https://y-flax-two.vercel.app/tasks');
   //       const data = await response.json();
   //       setTasks(data);
   //     } catch (error) {
@@ -38,7 +38,7 @@ const AddTask = () => {
     console.log(fullData);
 
     // send data to the server
-    fetch('http://localhost:5000/task', {
+    fetch('https://y-flax-two.vercel.app/task', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
