@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <div className='flex max-w-[1300px] mx-auto bg-slate-300'>
+        <div className='flex flex-col md:flex-row max-w-[1300px] mx-auto '>
 
-            <div className="div w-64 min-h-screen bg-blue-200">
+            <div className="div  md:min-h-screen bg-blue-200">
                 <ul className="menu p-3">
                     <li>
 
@@ -27,7 +27,7 @@ const Dashboard = () => {
             </div>
 
 
-            <div className="flex-1 p-8">
+            <div className="flex-1 p-8 bg-slate-300">
                 <Outlet></Outlet>
             </div>
 

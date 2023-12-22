@@ -84,9 +84,12 @@ const TodoList = () => {
 
     };
 
+    const myTask = tasks.filter(item => item.users === userEmail)
+    console.log(myTask);
+
     return (
         <div className="todo-list flex flex-col gap-5 ">
-            {tasks?.map((task) => (
+            {myTask?.map((task) => (
                 <TodoTask key={task?.id} task={task} onDelete={handleDelete} onEdit={handleEdit} />
             ))}
         </div>

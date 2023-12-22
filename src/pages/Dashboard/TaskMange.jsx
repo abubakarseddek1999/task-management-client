@@ -28,16 +28,16 @@ const TaskMange = () => {
 
             <div className='flex justify-between'>
                 <div className='W-1/3'>
-                    <h2 className='text-2xl font-bold'>TODO </h2>
+                    <h2 className='text-xl md:text-2xl font-bold'>TODO </h2>
                     <TodoList></TodoList>
 
                 </div>
                 <div className='W-1/3 '>
-                    <h2 className='text-2xl font-bold'>PENDING </h2>
+                    <h2 className='text-xl md:text-2xl font-bold'>PENDING </h2>
 
                 </div>
                 <div className='W-1/3'>
-                    <h2 className='text-2xl font-bold'>COMPLETE </h2>
+                    <h2 className='text-xl md:text-2xl font-bold'>COMPLETE </h2>
 
                 </div>
 
