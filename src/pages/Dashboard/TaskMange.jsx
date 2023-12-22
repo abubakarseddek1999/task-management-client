@@ -7,25 +7,6 @@ const TaskMange = () => {
     console.log(user);
     return (
         <div>
-            {/* Profile Information */}
-            <div className="profile-section border p-5 m-5 ">
-                <h2 className='text-xl font-bold text-center'>Profile Information</h2>
-                {user ? (
-                    <div className='text-center'>
-                        <div className="avatar">
-                            <div className="w-24 rounded-xl">
-                                <img className='border ' src={user?.photoURL} alt='user photo' />
-                            </div>
-                        </div>
-                        <p>Name: {user.displayName}</p>
-                        <p>Email: {user.email}</p>
-                        {/* Add other profile information here */}
-                    </div>
-                ) : (
-                    <p>Please log in to view your profile.</p>
-                )}
-            </div>
-
             <div className='flex justify-between'>
                 <div className='W-1/3'>
                     <h2 className='text-xl md:text-2xl font-bold'>TODO </h2>
